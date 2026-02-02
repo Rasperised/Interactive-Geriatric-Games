@@ -13,7 +13,7 @@ Each subfolder is a standalone Unity project and can be opened independently in 
 - FlappyBird
 - Pong
 - FlowerField
-- ArmRehabBall
+- TargetBall
 
 ---
 
