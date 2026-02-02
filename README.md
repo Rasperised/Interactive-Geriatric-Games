@@ -6,7 +6,7 @@ Ngee Ann Polytechnic
 
 Diploma in Electronic & Computer Engineering
 
-by: Renard Goh Ing Liang
+By Renard Goh Ing Liang
 
 A Unity-based suite of interactive games designed for geriatric rehabilitation and engagement, using both on-screen interaction and custom sensor-based controllers.
 
