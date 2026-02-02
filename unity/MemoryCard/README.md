@@ -23,13 +23,8 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Key Features
-- Upload custom images to be used as card faces
-- Capture images on the spot using a connected camera and use them immediately in gameplay
-- Two difficulty modes:
-  - Easy: 8 tiles
-  - Medium: 12 tiles
-- Automatic match checking with visual feedback
-- Restart and replay support with newly selected images
+- Allows users to upload exactly six custom images and play the game using their own selected images.
+- Includes preset image categories such as Food and Places for immediate gameplay.
 
 ---
 
