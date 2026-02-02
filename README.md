@@ -1,4 +1,4 @@
-# Interactive-Geriatric-Games-System
+# Interactive Geriatric Games (Rehab and Dementia)
 
 Final Year Project (FYP)
 
