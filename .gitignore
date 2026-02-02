@@ -97,3 +97,14 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# ------------------------------
+# Mac / Xcode junk (Unity plugins)
+# ------------------------------
+*.xcuserstate
+*.xcuserdata
+*.xcodeproj
+*.xcworkspace
+
+# UnityStandaloneFileBrowser – ignore Mac plugin artifacts
+Assets/**/Plugins/MacOS/
