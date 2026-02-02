@@ -10,7 +10,7 @@ A Unity-based suite of interactive games designed for geriatric rehabilitation a
 - Pong
 - Flappy Bird
 - Flower Field
-- Arm Rehabilitation Ball Game (multiple control variants)
+- Target-Based Ball Game (2 versions)
 
 ## Repository Structure
 - `unity/` – Unity project (all games)
