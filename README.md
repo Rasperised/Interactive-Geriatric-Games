@@ -1,6 +1,12 @@
-# Interactive-Geriatric-Games-System
+# Interactive Geriatric Games (Rehab and Dementia)
 
-Final Year Project (FYP) – Ngee Ann Polytechnic
+Final Year Project (FYP)
+
+Ngee Ann Polytechnic
+
+Diploma in Electronic & Computer Engineering
+
+By Renard Goh Ing Liang
 
 A Unity-based suite of interactive games designed for geriatric rehabilitation and engagement, using both on-screen interaction and custom sensor-based controllers.
 
@@ -10,7 +16,7 @@ A Unity-based suite of interactive games designed for geriatric rehabilitation a
 - Pong
 - Flappy Bird
 - Flower Field
-- Arm Rehabilitation Ball Game (multiple control variants)
+- Target-Based Ball Game (2 versions)
 
 ## Repository Structure
 - `unity/` – Unity project (all games)
