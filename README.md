@@ -1,8 +1,6 @@
 # Interactive Geriatric Games (Rehab and Dementia)
 
-Final Year Project (FYP)
-
-Ngee Ann Polytechnic
+Final Year Project (FYP) - Ngee Ann Polytechnic
 
 Diploma in Electronic & Computer Engineering
 
