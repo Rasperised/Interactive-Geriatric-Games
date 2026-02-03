@@ -1,0 +1,29 @@
+using UnityEngine;
+
+[RequireComponent(typeof(MeshFilter))]
+public class InvertNormals : MonoBehaviour
+{
+    void Start()
+    {
+        Mesh mesh = GetComponent<MeshFilter>().mesh;
+
+        // Invert normals
+        Vector3[] normals = mesh.normals;
+        for (int i = 0; i < normals.Length; i++)
+            normals[i] = -normals[i];
+        mesh.normals = normals;
+
+        // Reverse triangle winding
+        for (int i = 0; i < mesh.subMeshCount; i++)
+        {
+            int[] triangles = mesh.GetTriangles(i);
+            for (int j = 0; j < triangles.Length; j += 3)
+            {
+                int temp = triangles[j];
+                triangles[j] = triangles[j + 1];
+                triangles[j + 1] = temp;
+            }
+            mesh.SetTriangles(triangles, i);
+        }
+    }
+}
