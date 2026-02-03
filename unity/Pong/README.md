@@ -10,7 +10,7 @@ This game is part of a larger interactive games platform developed for geriatric
 - A ball moves continuously across the screen
 - The player controls a paddle to intercept and return the ball
 - The objective is to prevent the ball from passing the paddle
-- The game continues until a player gets 3 points
+- The game continues until a player gets a certain number of points
 
 ---
 
