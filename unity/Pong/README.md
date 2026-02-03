@@ -34,7 +34,7 @@ This game is part of a larger interactive games platform developed for geriatric
 ### Controls
 - **Computer Vision:** Move a light pen or torch light in front of the camera to control the paddle
 - **Sensor-Based Input:** Tilt an M5StickC device to move the paddle
-- **Keyboard:** Use standard directional keys to control paddle movement
+- **Keyboard:** Use standard directional keys to control paddle movement (A and D keys)
 
 ---
 
