@@ -24,7 +24,7 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ### Key Features
 - Supports multiple control input methods
-- Paddle control using computer vision with a light pen or torch light tracked via OpenCV
+- Paddle control using computer vision via OpenCV
 - Paddle control using tilt input from an M5StickC device
 - Optional keyboard control for testing and fallback interaction
 - Three difficulty levels:
