@@ -60,5 +60,6 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ### Notes
 - Keyboard input is provided primarily for testing and fallback purposes.
-- Camera-based input requires adequate lighting for reliable detection.
+- For camera-based input, webcam exposure should be set to the lowest possible value.
+- A clean background with minimal lighting interference is recommended for reliable light tracking.
 - The `Library` folder is excluded from version control and will be regenerated automatically by Unity on first launch.
