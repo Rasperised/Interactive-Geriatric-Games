@@ -6,6 +6,10 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ---
 
+### Interactive Hardware
+- M5StickC
+
+---
 ### Gameplay Overview
 - The player controls a bird that moves forward automatically
 - Obstacles appear continuously along the path
