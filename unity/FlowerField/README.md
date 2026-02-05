@@ -6,6 +6,11 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ---
 
+### Interactive Hardware
+- Sharp GP2Y0A21YK0F IR Distance Sensor
+- Microcontroller (e.g. ESP32)
+
+---
 ### Gameplay Overview
 - Flowers are arranged horizontally across the screen
 - The player activates flowers by moving their hand or arm within range of distance sensors
