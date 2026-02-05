@@ -31,7 +31,7 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Controls
-- **Sharp GP2Y0A21YK0F IR Distance Sensor:** Move the hand or arm closer to a sensor to activate the corresponding flower
+- **Distance Sensors:** Move the hand or arm closer to a sensor to activate the corresponding flower
 
 ---
 
