@@ -48,8 +48,9 @@ This game is part of a larger interactive games platform developed for geriatric
 ### How to Run
 1. Download the repository or use **Code → Download ZIP**
 2. Open **Unity Hub**
-3. Add this folder (`unity/Tiles`) as a project
-4. Open the main scene and press Play
+3. Add this folder (`unity/MemoryCard`) as a project
+4. Open the **Scenes** folder and load the main scene into the Hierarchy
+5. Press Play in the Unity Editor
 
 ---
 
