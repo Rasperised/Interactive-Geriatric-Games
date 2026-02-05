@@ -6,6 +6,12 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ---
 
+### Interactive Hardware
+- Light Pen or Torch
+- M5StickC
+
+---
+
 ### Gameplay Overview
 - A ball moves continuously across the screen
 - One paddle is controlled by the player, while the opposing paddle is controlled by an AI opponent
