@@ -1,6 +1,6 @@
 ## Flappy Bird
 
-Flappy Bird is a side-scrolling game where the player controls a bird and navigates through on-screen obstacles. The game focuses on timing, control, and sustained attention through simple and continuous interaction.
+Flappy Bird is a side-scrolling game where the player controls a bird and navigates through on-screen obstacles to earn points. The game focuses on timing, control, and sustained attention through simple and continuous interaction.
 
 This game is part of a larger interactive games platform developed for geriatric engagement and rehabilitation.
 
