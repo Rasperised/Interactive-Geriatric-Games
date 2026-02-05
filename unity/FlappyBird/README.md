@@ -38,7 +38,7 @@ This game is part of a larger interactive games platform developed for geriatric
 ### Controls
 - **Computer Vision:** Move a light pen or torch light in front of the camera to control the bird
 - **Sensor-Based Input:** Tilt an M5StickC device up or down to control the bird’s vertical movement
-- **Keyboard:** Press a designated key to move the bird upward (testing and fallback)
+- **Computer Mouse:** The bird follows the mouse cursor
 
 ---
 
@@ -46,7 +46,7 @@ This game is part of a larger interactive games platform developed for geriatric
 - Engine: Unity
 - Unity Version: 6000.2.7f2 (Unity 6 – Tech Stream)
 - Platform: PC
-- Input: OpenCV (camera-based), M5StickC (IMU), Keyboard
+- Input: OpenCV (camera-based), M5StickC (IMU), Computer Mouse
 
 ---
 
