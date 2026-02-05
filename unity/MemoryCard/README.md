@@ -7,7 +7,7 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Interactive Hardware
-- Touch screen monitor
+- Touch Screen Monitor
  
 ---
 ### Gameplay Overview
