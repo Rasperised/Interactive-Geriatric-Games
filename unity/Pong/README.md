@@ -54,7 +54,8 @@ This game is part of a larger interactive games platform developed for geriatric
 2. Open **Unity Hub**
 3. Add this folder (`unity/Pong`) as a project
 4. Connect the required input device (camera or M5StickC)
-5. Open the main scene and press Play
+5. Open the **Scenes** folder and load the main scene into the Hierarchy
+6. Press Play in the Unity Editor
 
 ---
 
