@@ -29,8 +29,8 @@ This game is part of a larger interactive games platform developed for geriatric
 ### Key Features
 - Supports multiple control input methods for controlling the bird
 - Bird control using computer vision via OpenCV
-- Bird control using tilt input via an M5StickC device
-- Optional keyboard input for testing and fallback interaction
+- Bird control using tilt input via M5StickC
+- Optional mouse input for testing and fallback interaction
 - Simple scoring based on successful obstacle navigation
 
 ---
