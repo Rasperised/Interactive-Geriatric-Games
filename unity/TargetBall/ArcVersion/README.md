@@ -7,7 +7,7 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Interactive Hardware
-- M5StickC (IMU-based tilt input)
+- M5StickC
 
 ---
 
