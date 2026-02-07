@@ -37,8 +37,8 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Controls
-- Mouse or touch input
-- Drag and drop tiles to reposition them
+- **Touch Input:** Touch and drag to interact with and move tiles
+- **Computer Mouse:** Click and drag tiles using the left mouse button
 
 ---
 
