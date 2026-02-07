@@ -8,7 +8,7 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ### Interactive Hardware
 - Sharp GP2Y0A21YK0F IR Distance Sensor
-- ESP32 Microcontroller
+- M5StickC Microcontroller
 
 ---
 
@@ -43,10 +43,11 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Hardware Setup (Brief)
-- A Sharp IR distance sensor is positioned facing the user
+- A Sharp IR distance sensor is connected directly to the M5StickC
 - The sensor detects changes in arm distance
-- Distance readings are mapped to the ball’s vertical movement
-- GPIO pin assignments depend on the specific ESP32 wiring configuration
+- Distance readings are transmitted to Unity via the M5StickC
+- The received values are mapped to the ball’s vertical movement
+- GPIO pin assignments depend on the specific M5StickC wiring configuration
 
 ---
 
@@ -54,7 +55,7 @@ This game is part of a larger interactive games platform developed for geriatric
 - Engine: Unity
 - Unity Version: 6000.2.7f2 (Unity 6 – Tech Stream)
 - Platform: PC
-- Input: IR distance sensor (via ESP32 microcontroller)
+- Input: IR distance sensor (via M5StickC)
 
 ---
 
@@ -62,7 +63,7 @@ This game is part of a larger interactive games platform developed for geriatric
 1. Download the repository or use **Code → Download ZIP**
 2. Open **Unity Hub**
 3. Add this folder (`unity/TargetBall/VerticalVersion`) as a project
-4. Connect the distance sensor to the ESP32
+4. Connect the IR distance sensor to the M5StickC
 5. Open the **Scenes** folder and load the main scene into the Hierarchy
 6. Press Play in the Unity Editor
 
