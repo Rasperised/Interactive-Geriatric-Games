@@ -1,11 +1,15 @@
 ## Flappy Bird
 
-Flappy Bird is a side-scrolling game where the player controls a bird and navigates through on-screen obstacles. The game focuses on timing, control, and sustained attention through simple and continuous interaction.
+Flappy Bird is a side-scrolling game where the player controls a bird and navigates through on-screen obstacles to earn points. The game focuses on timing, control, and sustained attention through simple and continuous interaction.
 
 This game is part of a larger interactive games platform developed for geriatric engagement and rehabilitation.
 
 ---
 
+### Interactive Hardware
+- M5StickC
+
+---
 ### Gameplay Overview
 - The player controls a bird that moves forward automatically
 - Obstacles appear continuously along the path
@@ -33,8 +37,8 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ### Controls
 - **Computer Vision:** Move a light pen or torch light in front of the camera to control the bird
-- **Sensor-Based Input:** Tilt an M5StickC device to control the bird’s vertical movement
-- **Keyboard:** Press a designated key to move the bird upward (testing and fallback)
+- **Sensor-Based Input:** Tilt an M5StickC device up or down to control the bird’s vertical movement
+- **Computer Mouse:** The bird follows the mouse cursor
 
 ---
 
@@ -42,7 +46,7 @@ This game is part of a larger interactive games platform developed for geriatric
 - Engine: Unity
 - Unity Version: 6000.2.7f2 (Unity 6 – Tech Stream)
 - Platform: PC
-- Input: OpenCV (camera-based), M5StickC (IMU), Keyboard
+- Input: OpenCV (camera-based), M5StickC (IMU), Computer Mouse
 
 ---
 

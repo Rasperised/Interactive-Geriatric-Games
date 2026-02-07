@@ -1,36 +1,51 @@
-## Memory Card
+## Flower Field
 
-Memory Card is a cognitive matching game designed for elderly users, with a focus on memory recall, visual recognition, and sustained attention. The game presents a set of face-down cards that must be flipped and matched in pairs.
+Flower Field is an interactive game where players trigger on-screen flowers using distance-based hand or arm movement. The game focuses on spatial awareness and controlled movement through simple, sensor-driven interaction.
 
-This game is part of a larger interactive games platform developed for geriatric cognitive stimulation.
+This game is part of a larger interactive games platform developed for geriatric engagement and rehabilitation.
 
 ---
 
+### Interactive Hardware
+- Sharp GP2Y0A21YK0F IR Distance Sensor
+- ESP32 Microcontroller
+
+---
 ### Gameplay Overview
-- Players flip cards to reveal their contents
-- The objective is to match pairs of identical cards
-- Correct matches remain visible, while incorrect pairs are hidden again
-- The game continues until all pairs are successfully matched
+- Flowers are arranged horizontally across the screen
+- The player activates flowers by moving their hand or arm within range of distance sensors
+- Each sensor corresponds to a specific on-screen flower
+- The game encourages exploration and repeated interaction across the full horizontal range
 
 ---
 
 ### Therapeutic Intent
-- Encourages short-term memory recall
-- Supports visual recognition and concentration
-- Promotes repeated, low-pressure cognitive engagement
-- Designed to be simple and non-time-pressured for elderly users
+- Encourages controlled upper-limb movement
+- Supports spatial awareness and left-to-right reach
+- Promotes repeated, low-pressure physical engagement
+- Allows self-paced interaction without time constraints
 
 ---
 
 ### Key Features
-- Allows users to upload exactly six custom images and play the game using their own selected images.
-- Includes preset image categories such as Food and Places for immediate gameplay.
+- Distance sensor–based interaction for triggering on-screen elements
+- Multiple sensors mapped to different flower positions
+- Clear left-to-right spatial mapping between sensors and on-screen flowers
+- Simple visual feedback when flowers are activated
 
 ---
 
 ### Controls
-- Mouse or touch input
-- Single-click / tap to flip cards
+- **Distance Sensors:** Move the hand or arm closer to a sensor to activate the corresponding flower
+
+---
+
+### Hardware Setup (Brief)
+- Multiple distance sensors are arranged horizontally
+- The first distance sensor corresponds to the leftmost flower on screen
+- The fifth distance sensor corresponds to the rightmost flower on screen
+- Sensor-to-flower mapping follows a left-to-right order
+- GPIO pin assignments depend on the specific hardware connections used
 
 ---
 
@@ -38,19 +53,21 @@ This game is part of a larger interactive games platform developed for geriatric
 - Engine: Unity
 - Unity Version: 6000.2.7f2 (Unity 6 – Tech Stream)
 - Platform: PC
-- Input: Mouse / Touch
+- Input: Distance sensors (via microcontroller)
 
 ---
 
 ### How to Run
 1. Download the repository or use **Code → Download ZIP**
 2. Open **Unity Hub**
-3. Add this folder (`unity/MemoryCard`) as a project
-4. Open the **Scenes** folder and load the main scene into the Hierarchy
-5. Press Play in the Unity Editor
+3. Add this folder (`unity/FlowerField`) as a project
+4. Connect the distance sensors to the microcontroller
+5. Open the **Scenes** folder and load the main scene into the Hierarchy
+6. Press Play in the Unity Editor
 
 ---
 
 ### Notes
+- Sensor positioning should remain consistent to preserve correct left-to-right mapping.
+- Minor calibration may be required depending on sensor placement and distance range.
 - The `Library` folder is excluded from version control and will be regenerated automatically by Unity on first launch.
-

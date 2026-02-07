@@ -6,6 +6,10 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ---
 
+### Interactive Hardware
+- Touch Screen Monitor
+ 
+---
 ### Gameplay Overview
 - Players flip cards to reveal their contents
 - The objective is to match pairs of identical cards

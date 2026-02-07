@@ -6,6 +6,11 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ---
 
+### Interactive Hardware
+- Touch Screen Monitor
+
+---
+
 ### Gameplay Overview
 - A complete image is divided into multiple tiles and shuffled
 - Players rearrange the tiles to reconstruct the original image
