@@ -21,6 +21,3 @@ A Unity-based suite of interactive games designed for geriatric rehabilitation a
 - `hardware/` – ESP32 / M5StickC controller code
 - `docs/` – Setup notes and system explanation
 - `media/` – Screenshots and demo videos
-
-## Disclaimer
-This project is a student prototype and is not a medical device.
