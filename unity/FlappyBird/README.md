@@ -8,8 +8,10 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ### Interactive Hardware
 - M5StickC
+- USB webcam (for computer vision input)
 
 ---
+
 ### Gameplay Overview
 - The player controls a bird that moves forward automatically
 - Obstacles appear continuously along the path
@@ -37,8 +39,8 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ### Controls
 - **Computer Vision:** Move a light pen or torch light in front of the camera to control the bird
-- **Sensor-Based Input:** Tilt an M5StickC device up or down to control the bird’s vertical movement
-- **Computer Mouse:** The bird follows the mouse cursor
+- **Sensor-Based Input:** Tilt the M5StickC device up or down to control the bird’s vertical movement
+- **Computer Mouse:** Move the mouse to control the bird’s vertical position
 
 ---
 
@@ -62,5 +64,5 @@ This game is part of a larger interactive games platform developed for geriatric
 ### Notes
 - For demonstration purposes, the M5StickC input method is primarily used.
 - Camera-based input requires adequate lighting and minimal background interference for reliable tracking.
-- Keyboard input is provided primarily for testing and fallback purposes.
+- Mouse input is provided primarily for testing and fallback purposes.
 - The `Library` folder is excluded from version control and will be regenerated automatically by Unity on first launch.
