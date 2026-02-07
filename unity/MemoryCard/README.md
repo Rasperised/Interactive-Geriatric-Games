@@ -33,8 +33,8 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Controls
-- Mouse or touch input
-- Single-click / tap to flip cards
+- **Touch Input:** Tap or touch to flip cards
+- **Computer Mouse:** Click to flip cards using the left mouse button
 
 ---
 
