@@ -1,4 +1,5 @@
-Description:
+## Description
+
 This folder contains a combined M5StickC controller firmware used across
 multiple games during development and testing.
 
