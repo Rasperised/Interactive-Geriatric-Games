@@ -3,6 +3,6 @@
 This folder contains two variants of the Target Ball rehabilitation game, each exploring a different control method.
 
 - **Arc Version:** Ball movement follows a curved path controlled by arm tilt input.
-- **Vertical Version:** Ball movement is controlled using vertical arm displacement detected by a distance sensor.
+- **Vertical Version:** Ball movement is controlled using vertical arm displacement.
 
 Each variant is implemented as a standalone Unity project and can be opened independently in Unity Hub.
