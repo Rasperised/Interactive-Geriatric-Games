@@ -38,7 +38,7 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Controls
-- **Distance Sensor:** Move the arm closer to or further from the sensor to control the ball’s vertical position
+- **Distance Sensor:** Grab the handle on the arm movement rehabilitation device and move it up and down to control the ball’s vertical position
 
 ---
 
