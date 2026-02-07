@@ -8,7 +8,7 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ### Interactive Hardware
 - Sharp GP2Y0A21YK0F IR Distance Sensor
-- M5StickC or ESP32
+- M5StickC or ESP32 Microcontroller
 
 ---
 
