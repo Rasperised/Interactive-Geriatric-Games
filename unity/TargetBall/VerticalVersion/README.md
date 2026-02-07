@@ -43,7 +43,7 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Hardware Setup (Brief)
-- A Sharp IR distance sensor is connected directly to the M5StickC
+- For my setup, the Sharp IR distance sensor is connected directly to the M5StickC
 - The sensor detects changes in arm distance
 - Distance readings are transmitted to Unity via the M5StickC
 - The received values are mapped to the ball’s vertical movement
