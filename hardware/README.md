@@ -2,6 +2,8 @@
 
 This folder contains hardware-related firmware, test code, and setup notes used to support the interactive components across the project.
 
+All hardware scripts in this folder are written for use with the **Arduino IDE** and are intended to run on microcontroller-based devices such as the M5StickC and ESP32.
+
 The hardware modules enable sensor-based and motion-based interaction for selected games, allowing players to control gameplay using physical movement rather than standard mouse or keyboard input.
 
 Each subfolder corresponds to a specific hardware configuration or test setup, and includes reference code and brief documentation describing its purpose and usage.
