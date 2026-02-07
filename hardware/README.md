@@ -4,9 +4,9 @@ This folder contains hardware-related firmware, test code, and setup notes used 
 
 All hardware scripts in this folder are written for use with the **Arduino IDE** software and are intended to run on microcontroller-based devices such as the M5StickC and ESP32.
 
-The hardware modules enable sensor-based and motion-based interaction for selected games, allowing players to control gameplay using physical movement rather than standard mouse or keyboard input.
+The hardware modules enable sensor-based and motion-based interaction for selected games.
 
-Each subfolder corresponds to a specific hardware configuration or test setup, and includes reference code and brief documentation describing its purpose and usage.
+Each subfolder corresponds to a specific hardware configuration or test setup, and reference code.
 
 ---
 
@@ -38,6 +38,7 @@ Each subfolder corresponds to a specific hardware configuration or test setup, a
   - Flappy Bird  
   - Pong  
   - Target Ball (Arc Version)
+  - Target Ball (Vertical Version using distance sensor)
 
 - **M5StickC Sensors Test**  
   Test firmware used to verify IMU readings, distance sensor values, and serial communication before integration with Unity.
@@ -46,8 +47,6 @@ Each subfolder corresponds to a specific hardware configuration or test setup, a
 
 ### Notes
 
-- Hardware usage is optional and intended to enhance interactivity for selected games.
-- All games can still be opened, reviewed, and tested in Unity without connecting hardware.
 - Pin assignments depend on how the hardware components are connected.
 - The provided pin mappings can be followed as a reference or adapted to suit different wiring configurations.
 
