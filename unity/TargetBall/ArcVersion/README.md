@@ -30,7 +30,7 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ### Key Features
 - Arc-based ball movement controlled using tilt input
-- IMU-driven interaction using an M5StickC device
+- IMU-driven interaction using the M5StickC device
 - Alternating target positions to encourage balanced movement
 - Visual feedback upon successful target hits
 
