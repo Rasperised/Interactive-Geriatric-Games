@@ -1,0 +1,56 @@
+#include <M5StickC.h>
+
+#define IR_PIN 36  // GPIO36 (ADC pin)
+
+void setup() {
+  M5.begin();
+  Serial.begin(115200);
+  
+  M5.Lcd.setRotation(3);
+  M5.Lcd.fillScreen(BLACK);
+  M5.Lcd.setCursor(0, 0);
+  M5.Lcd.setTextSize(1);
+  M5.Lcd.println("Ball Game - IR");
+  
+  delay(1000);
+}
+
+void loop() {
+  M5.update(); // Update button states
+  
+  int raw = analogRead(IR_PIN);
+  
+  // Adjust these based on your sensor testing
+  // Closer hand = higher raw value = ball goes UP
+  // Further hand = lower raw value = ball goes DOWN
+  int minRaw = 500;   // hand far (tune this)
+  int maxRaw = 3500;  // hand close (tune this)
+  
+  raw = constrain(raw, minRaw, maxRaw);
+  
+  // Normalize to 0–1
+  // 0 = far (bottom), 1 = close (top)
+  float normalized = (raw - minRaw) / float(maxRaw - minRaw);
+  
+  // Send to Unity
+  Serial.println(normalized, 3);
+  
+  // Optional: Display on screen
+  M5.Lcd.setCursor(0, 20);
+  M5.Lcd.setTextColor(WHITE, BLACK);
+  M5.Lcd.printf("Raw: %4d  ", raw);
+  M5.Lcd.setCursor(0, 35);
+  M5.Lcd.printf("Norm: %.3f  ", normalized);
+  
+  // Optional: Show position indicator
+  M5.Lcd.setCursor(0, 50);
+  if (normalized > 0.7) {
+    M5.Lcd.print("Position: UP    ");
+  } else if (normalized < 0.3) {
+    M5.Lcd.print("Position: DOWN  ");
+  } else {
+    M5.Lcd.print("Position: MIDDLE");
+  }
+  
+  delay(20); // 50Hz update rate
+}
