@@ -22,5 +22,5 @@ A Unity-based suite of interactive games designed for geriatric rehabilitation a
 - `docs/` – Setup notes and system explanation
 - `media/` – Screenshots and demo videos
 
-## Note
+## Notes
 - Due to Unity’s folder structure, it is recommended to extract or clone this repository into a short directory path (e.g. C:\repo\) to avoid Windows path length issues.
