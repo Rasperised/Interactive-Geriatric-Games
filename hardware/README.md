@@ -6,7 +6,7 @@ All hardware scripts in this folder are written for use with the **Arduino IDE**
 
 The hardware modules enable sensor-based and motion-based interaction for selected games.
 
-Each subfolder corresponds to a specific hardware configuration or test setup, and reference code.
+Each subfolder corresponds to a specific hardware configuration or test setup and includes reference code.
 
 ---
 
@@ -49,4 +49,3 @@ Each subfolder corresponds to a specific hardware configuration or test setup, a
 
 - Pin assignments depend on how the hardware components are connected.
 - The provided pin mappings can be followed as a reference or adapted to suit different wiring configurations.
-
