@@ -37,7 +37,7 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Controls
-- **Sensor-Based Input:** Tilt the arm rehabilitation device left or right to guide the ball along the arc
+- **Sensor-Based Input:** Grab the handle and tilt the arm rehabilitation device left or right to guide the ball along the arc
 
 ---
 
