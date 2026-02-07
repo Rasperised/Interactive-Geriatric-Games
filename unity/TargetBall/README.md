@@ -1,6 +1,6 @@
 ## Target Ball Game
 
-This folder contains two verions of the Target Ball rehabilitation game, each exploring a different control method. Both versions use the arm movement rehabilitation device.
+This folder contains two verions of the Target Ball rehabilitation game, each exploring a different control method.
 
 - **Arc Version:** Ball movement follows a curved path controlled by arm tilt input.
 - **Vertical Version:** Ball movement is controlled using vertical arm displacement.
