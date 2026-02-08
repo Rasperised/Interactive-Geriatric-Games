@@ -1,4 +1,4 @@
-# Interactive Geriatric Games (Rehab and Dementia)
+# Interactive Geriatric Games (Rehabilitation and Dementia)
 
 Final Year Project (FYP) - Ngee Ann Polytechnic
 
