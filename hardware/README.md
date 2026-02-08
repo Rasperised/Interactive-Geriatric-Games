@@ -43,6 +43,14 @@ Each subfolder corresponds to a specific hardware configuration or test setup an
 - **M5StickC Sensors Test**  
   Test firmware used to verify IMU readings, distance sensor values, and serial communication before integration with Unity.
 
+  - **Sharp IR Distance Sensor (Flower Field)**  
+  Firmware and setup code for using multiple Sharp IR distance sensors in the Flower Field game.  
+  Sensors are mapped left-to-right to corresponding on-screen flower positions.
+
+- **Sharp IR Distance Sensor Target Ball (Vertical)**  
+  Standalone firmware for testing the vertical Target Ball control using a single Sharp IR distance sensor.  
+  Designed to run on an ESP32 without the use of an M5StickC, allowing isolated distance-sensor testing and calibration.
+
 ---
 
 ### Notes
