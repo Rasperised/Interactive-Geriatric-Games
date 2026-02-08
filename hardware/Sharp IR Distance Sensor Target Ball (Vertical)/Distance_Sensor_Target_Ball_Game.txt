@@ -1,0 +1,24 @@
+#define IR_PIN 34
+
+void setup() {
+  Serial.begin(115200);
+  analogReadResolution(12);
+  delay(1000);
+  Serial.println("Sharp IR raw output");
+}
+
+void loop() {
+  int raw = analogRead(IR_PIN);
+
+  // Adjust these values - increase minRaw to avoid the dead zone
+  int minRaw = 500;  // try 500-800 instead of 200
+  int maxRaw = 3800;
+  
+  raw = constrain(raw, minRaw, maxRaw);
+
+  // Normalize to 0–1
+  float normalized = (raw - minRaw) / float(maxRaw - minRaw);
+
+  Serial.println(normalized, 3);
+  delay(20);
+}

@@ -1,0 +1,85 @@
+// --- SENSOR PINS ---
+const int sensor1Pin = 36;
+const int sensor2Pin = 39;
+const int sensor3Pin = 34;
+const int sensor4Pin = 35;
+const int sensor5Pin = 32;
+
+// Smoothed values
+float smooth1 = 0, smooth2 = 0, smooth3 = 0, smooth4 = 0, smooth5 = 0;
+
+// Exponential smoothing strength
+float alpha = 0.05;  
+
+// Print interval (20 Hz)
+unsigned long lastSend = 0;
+const unsigned long sendInterval = 50;
+
+
+// ----------------------- FAST 3-SAMPLE MEDIAN -----------------------
+int median3(int a, int b, int c) {
+  return max(min(a, b), min(max(a, b), c));
+}
+
+
+// ----------------------- ADC → Distance ------------------------------
+float getDistance(float raw) {
+  float v = raw * (3.3 / 4095.0);
+  float d = 27.728 * pow(v, -1.2045);
+
+  // Clamp reasonable limits
+  if (d < 5) d = 5;      // lower bound
+  if (d > 80) d = 80;    // upper bound raised to 80 cm
+
+  return d;
+}
+
+
+void setup() {
+  Serial.begin(115200);
+  delay(300);
+  Serial.println("SENSOR STREAM READY (ULTRA-STABLE MODE)");
+}
+
+
+void loop() {
+
+  // --- Median filter ---
+  int r1 = median3(analogRead(sensor1Pin), analogRead(sensor1Pin), analogRead(sensor1Pin));
+  int r2 = median3(analogRead(sensor2Pin), analogRead(sensor2Pin), analogRead(sensor2Pin));
+  int r3 = median3(analogRead(sensor3Pin), analogRead(sensor3Pin), analogRead(sensor3Pin));
+  int r4 = median3(analogRead(sensor4Pin), analogRead(sensor4Pin), analogRead(sensor4Pin));
+  int r5 = median3(analogRead(sensor5Pin), analogRead(sensor5Pin), analogRead(sensor5Pin));
+
+  // --- Exponential smoothing ---
+  smooth1 = smooth1 * (1 - alpha) + r1 * alpha;
+  smooth2 = smooth2 * (1 - alpha) + r2 * alpha;
+  smooth3 = smooth3 * (1 - alpha) + r3 * alpha;
+  smooth4 = smooth4 * (1 - alpha) + r4 * alpha;
+  smooth5 = smooth5 * (1 - alpha) + r5 * alpha;
+
+  // --- Timed output ---
+  unsigned long now = millis();
+  if (now - lastSend >= sendInterval) {
+
+    float d1 = getDistance(smooth1);
+    float d2 = getDistance(smooth2);
+    float d3 = getDistance(smooth3);
+    float d4 = getDistance(smooth4);
+    float d5 = getDistance(smooth5);
+
+    Serial.print("{\"s1\":");
+    Serial.print(d1, 1);
+    Serial.print(",\"s2\":");
+    Serial.print(d2, 1);
+    Serial.print(",\"s3\":");
+    Serial.print(d3, 1);
+    Serial.print(",\"s4\":");
+    Serial.print(d4, 1);
+    Serial.print(",\"s5\":");
+    Serial.print(d5, 1);
+    Serial.println("}");
+
+    lastSend = now;
+  }
+}
