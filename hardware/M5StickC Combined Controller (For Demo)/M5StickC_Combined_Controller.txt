@@ -1,0 +1,154 @@
+#include <M5StickC.h>
+
+#define IR_PIN 36
+
+// --------------------
+// Mode definitions
+// --------------------
+enum InputMode {
+  MODE_FLAPPY = 0,
+  MODE_ARC    = 1,
+  MODE_DIST   = 2,
+  MODE_PONG   = 3
+};
+
+InputMode mode = MODE_FLAPPY;
+
+// --------------------
+// Timing
+// --------------------
+unsigned long lastSend = 0;
+const unsigned long interval = 20; // 50 Hz
+
+// --------------------
+// Pong IMU variables
+// --------------------
+float gx, gy, gz;   // gyro (deg/s)
+float ax, ay, az;   // accel (g)
+float pitch = 0, roll = 0, yaw = 0;
+unsigned long prevTime = 0;
+
+// --------------------
+// LCD
+// --------------------
+void drawModeScreen() {
+  M5.Lcd.fillScreen(BLACK);
+  M5.Lcd.setTextSize(2);
+  M5.Lcd.setCursor(10, 20);
+
+  if (mode == MODE_FLAPPY) {
+    M5.Lcd.setTextColor(CYAN, BLACK);
+    M5.Lcd.println("FLAPPY");
+
+    M5.Lcd.setTextColor(WHITE, BLACK);
+    M5.Lcd.setTextSize(1);
+    M5.Lcd.setCursor(10, 50);
+    M5.Lcd.println("Tilt Control");
+  }
+  else if (mode == MODE_ARC) {
+    M5.Lcd.setTextColor(YELLOW, BLACK);
+    M5.Lcd.println("ARC BALL");
+
+    M5.Lcd.setTextColor(WHITE, BLACK);
+    M5.Lcd.setTextSize(1);
+    M5.Lcd.setCursor(10, 50);
+    M5.Lcd.println("Angle Control");
+  }
+  else if (mode == MODE_DIST) {
+    M5.Lcd.setTextColor(GREEN, BLACK);
+    M5.Lcd.println("DIST BALL");
+
+    M5.Lcd.setTextColor(WHITE, BLACK);
+    M5.Lcd.setTextSize(1);
+    M5.Lcd.setCursor(10, 50);
+    M5.Lcd.println("Distance Control");
+  }
+  else if (mode == MODE_PONG) {
+    M5.Lcd.setTextColor(MAGENTA, BLACK);
+    M5.Lcd.println("PONG");
+
+    M5.Lcd.setTextColor(WHITE, BLACK);
+    M5.Lcd.setTextSize(1);
+    M5.Lcd.setCursor(10, 50);
+    M5.Lcd.println("Gyro Control");
+  }
+}
+
+void setup() {
+  M5.begin();
+  M5.IMU.Init();
+  Serial.begin(115200);
+
+  M5.Lcd.setRotation(3);
+  drawModeScreen();
+}
+
+void loop() {
+  M5.update();
+
+  // --------------------
+  // Button A: switch mode
+  // --------------------
+  if (M5.BtnA.wasPressed()) {
+    mode = (InputMode)((mode + 1) % 4);
+    drawModeScreen();
+  }
+
+  // --------------------
+  // Fixed update rate
+  // --------------------
+  if (millis() - lastSend < interval) return;
+  lastSend = millis();
+
+  // --------------------
+  // Read IMU
+  // --------------------
+  M5.IMU.getAccelData(&ax, &ay, &az);
+
+  if (mode == MODE_FLAPPY) {
+    // Flappy Bird (unchanged Unity)
+    Serial.println(ay);
+  }
+  else if (mode == MODE_ARC) {
+    // Arc Ball (unchanged Unity)
+    float angle = -atan2(ax, ay) * 180.0 / PI;
+    Serial.println(angle);
+  }
+  else if (mode == MODE_DIST) {
+    // Distance Ball (unchanged Unity)
+    int raw = analogRead(IR_PIN);
+    raw = constrain(raw, 500, 3500);
+    float dist = (raw - 500) / float(3500 - 500);
+    Serial.println(dist);
+  }
+  else if (mode == MODE_PONG) {
+    // --------------------
+    // Pong (CSV: pitch,roll,yaw)
+    // --------------------
+    unsigned long now = millis();
+    float dt = (now - prevTime) / 1000.0f;
+    prevTime = now;
+
+    M5.IMU.getGyroData(&gx, &gy, &gz);
+
+    float pitchAcc = atan2(ay, sqrt(ax * ax + az * az)) * 180.0 / PI;
+    float rollAcc  = atan2(-ax, az) * 180.0 / PI;
+
+    pitch = 0.98f * (pitch + gx * dt) + 0.02f * pitchAcc;
+    roll  = 0.98f * (roll  + gy * dt) + 0.02f * rollAcc;
+    yaw  += gz * dt;
+
+    // Keep angles bounded
+    if (pitch > 180) pitch -= 360;
+    if (pitch < -180) pitch += 360;
+    if (roll > 180) roll -= 360;
+    if (roll < -180) roll += 360;
+    if (yaw > 180) yaw -= 360;
+    if (yaw < -180) yaw += 360;
+
+    // EXACT format Unity expects
+    Serial.print(pitch, 2); Serial.print(",");
+    Serial.print(roll, 2);  Serial.print(",");
+    Serial.println(yaw, 2);
+  }
+}
