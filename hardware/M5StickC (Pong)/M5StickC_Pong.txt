@@ -1,0 +1,47 @@
+#include <M5StickC.h>
+
+float gx, gy, gz;   // gyro (deg/s)
+float ax, ay, az;   // accel (g)
+float pitch = 0, roll = 0, yaw = 0;
+unsigned long prevTime = 0;
+
+void setup() {
+  M5.begin();
+  M5.Imu.Init();
+  Serial.begin(115200);
+}
+
+void loop() {
+  unsigned long now = millis();
+  float dt = (now - prevTime) / 1000.0f;
+  prevTime = now;
+
+  // Read sensors
+  M5.Imu.getGyroData(&gx, &gy, &gz);
+  M5.Imu.getAccelData(&ax, &ay, &az);
+
+  // Calculate angles from accel
+  float pitchAcc = atan2(ay, sqrt(ax * ax + az * az)) * 180.0 / PI;
+  float rollAcc  = atan2(-ax, az) * 180.0 / PI;
+
+  // Complementary filter (98% gyro, 2% accel)
+  pitch = 0.98f * (pitch + gx * dt) + 0.02f * pitchAcc;
+  roll  = 0.98f * (roll  + gy * dt) + 0.02f * rollAcc;
+  yaw  += gz * dt;
+
+  // Keep within -180 to 180
+  if (pitch > 180) pitch -= 360;
+  if (pitch < -180) pitch += 360;
+  if (roll > 180) roll -= 360;
+  if (roll < -180) roll += 360;
+  if (yaw > 180) yaw -= 360;
+  if (yaw < -180) yaw += 360;
+
+  // Send ROLL instead of PITCH to Unity
+  // Format: pitch,roll,yaw (so Unity code can still parse normally)
+  Serial.print(pitch, 2); Serial.print(",");
+  Serial.print(roll, 2);  Serial.print(",");
+  Serial.println(yaw, 2);
+
+  delay(20); // ~50Hz
+}
