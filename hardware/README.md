@@ -37,13 +37,13 @@ Each subfolder corresponds to a specific hardware configuration or test setup an
   Supports:
   - Flappy Bird  
   - Pong  
-  - Target Ball (Arc Version)
+  - Target Ball (Arc Version)  
   - Target Ball (Vertical Version using distance sensor)
 
 - **M5StickC Sensors Test**  
   Test firmware used to verify IMU readings, distance sensor values, and serial communication before integration with Unity.
 
-  - **Sharp IR Distance Sensor (Flower Field)**  
+- **Sharp IR Distance Sensor (Flower Field)**  
   Firmware and setup code for using multiple Sharp IR distance sensors in the Flower Field game.  
   Sensors are mapped left-to-right to corresponding on-screen flower positions.
 
