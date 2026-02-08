@@ -53,7 +53,7 @@ Each subfolder corresponds to a specific hardware configuration or test setup an
 
 ---
 
-### Notes
+## Notes
 
 - Pin assignments depend on how the hardware components are connected.
 - The provided pin mappings can be followed as a reference or adapted to suit different wiring configurations.
