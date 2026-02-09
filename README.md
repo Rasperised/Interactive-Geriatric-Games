@@ -18,7 +18,7 @@ A Unity-based suite of interactive games designed for geriatric rehabilitation a
 ## Playable Game Builds
 This repository contains the full Unity project files and source code.
 
-For those who wish to **run and test the games directly without using the Unity Editor**, the final compiled executable builds are provided in a separate repository:
+For playable build versions of the games, please refer to the following repository:
 
 **Build Repository:**  
 https://github.com/Rasperised/Interactive-Geriatric-Games-Builds
