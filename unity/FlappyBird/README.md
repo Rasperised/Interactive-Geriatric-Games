@@ -49,7 +49,7 @@ This game is part of a larger interactive games platform developed for geriatric
 - Engine: Unity
 - Unity Version: 6000.2.7f2 (Unity 6 – Tech Stream)
 - Platform: PC
-- Input: OpenCV (camera-based), M5StickC (IMU), Computer Mouse
+- Input: OpenCV (camera-based), M5StickC (IMU), Mouse
 
 ---
 
