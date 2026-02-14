@@ -3,6 +3,15 @@
 This folder contains all Unity projects developed for the Interactive Geriatric Games FYP.
 
 Each subfolder is a standalone Unity project and can be opened independently in Unity Hub.
+---
+
+## Technical Requirements
+To ensure the hardware functions correctly across all games, these projects use the following configurations (already set in `ProjectSettings`):
+
+- **Unity Version:** 6000.2.7f2 (Unity 6)
+- **Render Pipeline:** Universal Render Pipeline (URP)
+- **Scripting Backend:** `.NET Framework` (Required for Serial/COM port communication)
+- **Input Handling:** `Both` (Supports legacy and New Input System)
 
 ---
 
