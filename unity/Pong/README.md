@@ -7,7 +7,8 @@ This game is part of a larger interactive games platform developed for geriatric
 ---
 
 ### Interactive Hardware
-- Light pen or torch  
+- Webcam
+- Torch light or light pen
 - M5StickC  
 
 ---
