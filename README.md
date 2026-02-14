@@ -30,5 +30,11 @@ All playable builds are available as downloadable ZIP files.
 - `hardware/` – ESP32 / M5StickC controller code
 - `docs/` – System overview and hardware integration notes
 
+## Credits & Third-Party Plugins
+Special thanks to the developers of the following open-source plugins used in this project:
+
+* **[UnitySerialPort](https://github.com/prossel/UnitySerialPort)** by prossel – Enables serial communication between Unity and the M5StickC/ESP32 hardware.
+* **[UnityStandaloneFileBrowser](https://github.com/gkngkc/UnityStandaloneFileBrowser)** by gkngkc – Used for the custom image upload feature in the Memory Card game.
+
 ## Notes
 - Due to Unity’s folder structure, it is recommended to extract or clone this repository into a short directory path (e.g. `C:\repo\`) to avoid Windows path length issues.
