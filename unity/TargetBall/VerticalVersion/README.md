@@ -64,7 +64,7 @@ This game is part of a larger interactive games platform developed for geriatric
 1. Download the repository or use **Code → Download ZIP**  
 2. Open **Unity Hub**  
 3. Add this folder (`unity/TargetBall/VerticalVersion`) as a project  
-4. Connect the IR distance sensor to the M5StickC  
+4. Connect the IR distance sensor to the M5StickC or ESP32 microcontroller  
 5. Open the **Scenes** folder and load the main scene into the Hierarchy  
 6. Press Play in the Unity Editor  
 
