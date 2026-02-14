@@ -8,7 +8,8 @@ This game is part of a larger interactive games platform developed for geriatric
 
 ### Interactive Hardware
 - M5StickC
-- USB webcam (for computer vision input)
+- Webcam
+- Torch light or light pen
 
 ---
 
