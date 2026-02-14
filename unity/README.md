@@ -5,6 +5,15 @@ This folder contains all Unity projects developed for the Interactive Geriatric 
 Each subfolder is a standalone Unity project and can be opened independently in Unity Hub.
 
 ---
+## Technical Requirements
+These projects are built with specific configurations to support custom hardware and computer vision. These settings are pre-configured in the `ProjectSettings` folders:
+
+- **Engine:** Unity 6 (6000.2.7f2)
+- **Render Pipeline:** Universal Render Pipeline (URP)
+- **Scripting Backend:** `.NET Framework` (Required for Serial/M5StickC communication)
+- **Input Handling:** `Both` (Supports legacy and New Input System)
+
+---
 
 ## Projects
 
