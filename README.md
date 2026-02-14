@@ -8,12 +8,12 @@ By Renard Goh Ing Liang
 A Unity-based suite of interactive games designed for geriatric rehabilitation and engagement, using both on-screen interaction and custom sensor-based controllers.
 
 ## Included Games
-- Memory Card
-- Tiles
-- Pong
-- Flappy Bird
-- Flower Field
-- Target-Based Ball Game (2 versions)
+- Memory Card (Dementia)
+- Tiles (Dementia)
+- Pong (Rehabilitation)
+- Flappy Bird (Rehabilitation)
+- Flower Field (Proof of Concept Game)
+- Target-Based Ball Game (Proof of Concept Game, 2 versions)
 
 ## Playable Game Builds
 This repository contains the full Unity project files and source code.
