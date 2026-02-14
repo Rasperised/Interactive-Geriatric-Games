@@ -13,7 +13,7 @@ A Unity-based suite of interactive games designed for geriatric rehabilitation a
 - Pong (Rehabilitation)
 - Flappy Bird (Rehabilitation)
 - Flower Field (Proof of Concept Game)
-- Target-Based Ball Game (Proof of Concept Game, 2 versions)
+- Target-Based Ball Game (Proof of Concept Game, 2 Versions)
 
 ## Playable Game Builds
 This repository contains the full Unity project files and source code.
