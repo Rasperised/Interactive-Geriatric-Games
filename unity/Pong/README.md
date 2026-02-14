@@ -61,7 +61,23 @@ This game is part of a larger interactive games platform developed for geriatric
 3. Add this folder (`unity/Pong`) as a project  
 4. Connect the required input device (camera or M5StickC)  
 5. Open the **Scenes** folder and load the main scene into the Hierarchy  
-6. Press Play in the Unity Editor  
+6. Press Play in the Unity Editor
+
+---
+
+### Camera Calibration (Low Exposure Setup)
+To ensure the OpenCV tracking accurately picks up the light pen or torch without interference from background lights, you must manually lower your webcam's exposure. Using **OBS Studio** is the most reliable way to save these hardware settings:
+
+1. **Open OBS Studio** and create a new **Scene**.
+2. In the **Sources** box, click the `+` icon and select **Video Capture Device**.
+3. Select your webcam and click **OK**.
+4. Right-click on the **Video Capture Device** source and select **Properties**.
+5. Scroll down and click the **Configure Video** button.
+6. In the popup window, navigate to the **Camera Control** tab.
+7. Find the **Exposure** slider:
+    * **Untick** the "Auto" checkbox.
+    * **Lower the slider** until the room appears dark and only the light source (torch/pen) is clearly visible as a bright point.
+8. Click **Apply** and **OK**. You can now close OBS; the hardware settings will remain active for the Unity game.
 
 ---
 
