@@ -41,7 +41,7 @@ This game is part of a larger interactive games platform developed for geriatric
 ### Controls
 - **Computer Vision:** Press **T** to enable OpenCV input, then move a light pen or torch light in front of the camera to control the bird
 - **Sensor-Based Input:** Tilt the M5StickC device up or down to control the bird’s vertical movement
-- **Computer Mouse:** Move the mouse to control the bird’s vertical position
+- **Mouse:** Move the mouse to control the bird’s vertical position
 
 ---
 
