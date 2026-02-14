@@ -2,7 +2,7 @@
 
 This folder contains hardware-related firmware, test code, and setup notes used to support the interactive components across the project.
 
-All hardware scripts in this folder are written for use with the **Arduino IDE** software and are intended to run on microcontroller-based devices such as the M5StickC and ESP32.
+All hardware scripts in this folder are written for use with the **Arduino IDE** software and are intended to run on microcontroller-based devices such as the M5StickC and ESP32. All hardware scripts are configured to use a Baud rate of 115200.
 
 The hardware modules enable sensor-based and motion-based interaction for selected games.
 
