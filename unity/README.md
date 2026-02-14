@@ -3,6 +3,7 @@
 This folder contains all Unity projects developed for the Interactive Geriatric Games FYP.
 
 Each subfolder is a standalone Unity project and can be opened independently in Unity Hub.
+
 ---
 
 ## Technical Requirements
